@@ -1,4 +1,4 @@
-package pl.mpietrewicz.crudresthal;
+package pl.mpietrewicz.crudresthal.integration;
 
 import org.junit.After;
 import org.junit.Before;
@@ -16,6 +16,7 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.test.context.ActiveProfiles;
 import org.springframework.test.context.junit4.SpringRunner;
+import pl.mpietrewicz.crudresthal.Application;
 import pl.mpietrewicz.crudresthal.entity.Company;
 import pl.mpietrewicz.crudresthal.repository.CompanyRepository;
 
@@ -27,7 +28,7 @@ import static org.assertj.core.api.Assertions.assertThat;
 @RunWith(SpringRunner.class)
 @SpringBootTest(classes = Application.class,
         webEnvironment = SpringBootTest.WebEnvironment.DEFINED_PORT)
-@ActiveProfiles("local")
+@ActiveProfiles("tc")
 public class CompanyCrudControllerTest {
 
     private static final String COMPANIES_ENDPOINT = "http://localhost:8080/companies";

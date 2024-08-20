@@ -1,4 +1,4 @@
-package pl.mpietrewicz.crudresthal;
+package pl.mpietrewicz.crudresthal.integration;
 
 import org.junit.After;
 import org.junit.Before;
@@ -16,6 +16,7 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.test.context.ActiveProfiles;
 import org.springframework.test.context.junit4.SpringRunner;
+import pl.mpietrewicz.crudresthal.Application;
 import pl.mpietrewicz.crudresthal.entity.Manager;
 import pl.mpietrewicz.crudresthal.entity.Project;
 import pl.mpietrewicz.crudresthal.entity.Team;
@@ -29,7 +30,7 @@ import static org.assertj.core.api.Assertions.assertThat;
 @RunWith(SpringRunner.class)
 @SpringBootTest(classes = Application.class,
         webEnvironment = SpringBootTest.WebEnvironment.DEFINED_PORT)
-@ActiveProfiles("local")
+@ActiveProfiles("tc")
 public class TeamCrudControllerTest {
 
     private static final String TEAMS_ENDPOINT = "http://localhost:8080/teams";
@@ -45,7 +46,6 @@ public class TeamCrudControllerTest {
         Team team = createTeam("existing_team@test.com");
         teamRepository.save(team);
     }
-
 
     @After
     public void after() {

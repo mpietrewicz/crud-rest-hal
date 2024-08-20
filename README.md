@@ -1,5 +1,6 @@
 ## General info
-This project is an example of of Spring Boot CRUD application using REST (@RepositoryRestResource) and docker containers to setup up and deploy app with postgres database.
+This project is an example of of Spring Boot CRUD application using 
+REST with HATEOAS and docker containers to setup up and deploy app with postgres database.
 
 ## Local run
 To run application on local machine set "local" profile as program arguments:

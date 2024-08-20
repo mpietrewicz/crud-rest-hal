@@ -1,4 +1,4 @@
-package pl.mpietrewicz.crudresthal.collectionmodel;
+package pl.mpietrewicz.crudresthal.integration.collectionmodel;
 
 import org.springframework.hateoas.CollectionModel;
 import pl.mpietrewicz.crudresthal.entity.Department;
