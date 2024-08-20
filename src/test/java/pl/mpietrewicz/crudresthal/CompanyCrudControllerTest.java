@@ -14,6 +14,7 @@ import org.springframework.hateoas.Link;
 import org.springframework.http.HttpMethod;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.test.context.ActiveProfiles;
 import org.springframework.test.context.junit4.SpringRunner;
 import pl.mpietrewicz.crudresthal.entity.Company;
 import pl.mpietrewicz.crudresthal.repository.CompanyRepository;
@@ -26,6 +27,7 @@ import static org.assertj.core.api.Assertions.assertThat;
 @RunWith(SpringRunner.class)
 @SpringBootTest(classes = Application.class,
         webEnvironment = SpringBootTest.WebEnvironment.DEFINED_PORT)
+@ActiveProfiles("local")
 public class CompanyCrudControllerTest {
 
     private static final String COMPANIES_ENDPOINT = "http://localhost:8080/companies";

@@ -14,6 +14,7 @@ import org.springframework.hateoas.Link;
 import org.springframework.http.HttpMethod;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.test.context.ActiveProfiles;
 import org.springframework.test.context.junit4.SpringRunner;
 import pl.mpietrewicz.crudresthal.entity.Manager;
 import pl.mpietrewicz.crudresthal.entity.Project;
@@ -28,6 +29,7 @@ import static org.assertj.core.api.Assertions.assertThat;
 @RunWith(SpringRunner.class)
 @SpringBootTest(classes = Application.class,
         webEnvironment = SpringBootTest.WebEnvironment.DEFINED_PORT)
+@ActiveProfiles("local")
 public class TeamCrudControllerTest {
 
     private static final String TEAMS_ENDPOINT = "http://localhost:8080/teams";

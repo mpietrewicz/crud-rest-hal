@@ -1,0 +1,17 @@
+services:
+  app:
+    container_name: crud-rest-hal-app
+    image: crud-rest-hal
+    build: ./
+    ports:
+      - "8080:8080"
+    depends_on:
+      - postgresql
+  postgresql:
+    image: postgres
+    ports:
+      - "5432:5432"
+    environment:
+      - POSTGRES_DB=crud-rest-hal-db
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=postgres
