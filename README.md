@@ -9,7 +9,7 @@ To run application on local machine set "local" profile as program arguments:
 ```
 
 ## Docker run
-To run this project od docker build jar and run docker compose:
+To run this project on docker container build jar and run docker compose:
 ```
 mvn clean install
 docker compose up
